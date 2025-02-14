@@ -1,17 +1,17 @@
-// import Artist from '@/components/Artist';
-// import Events from '@/components/Events';
-// import Footer from '@/components/Footer';
-// import Header from '@/components/Header';
-// import Hero from '@/components/Hero';
-// import Insta from '@/components/Insta';
-// import Contact from '@/components/Contact';
-// import Projects from '@/components/Projects';
-// import Sente from '@/components/Sente';
+// import Artist from '@/app/components/Artist';
+// import Events from '@/app/components/Events';
+// import Footer from '@/app/components/Footer';
+import Header from '@/app/components/Header';
+// import Hero from '@/app/components/Hero';
+// import Insta from '@/app/components/Insta';
+// import Contact from '@/app/components/Contact';
+// import Projects from '@/app/components/Projects';
+// import Sente from '@/app/components/Sente';
 
 export default function Home() {
   return (
     <main className='relative text-2xl text-red-900 bg-white'>
-      {/* <Header /> */}
+      <Header />
       {/* <Hero /> */}
       {/* <Us /> */}
       {/* <Services /> */}
