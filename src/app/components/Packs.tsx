@@ -1,5 +1,6 @@
 'use client';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import { useCallback } from 'react';
 
 interface Slide {
@@ -115,10 +116,12 @@ function EmblaCarousel({
             >
               {/* Card */}
               <div className='bg-white border rounded-lg shadow-md overflow-hidden'>
-                <img
+                <Image
                   src={slide.src}
                   alt={slide.title}
-                  className='w-full h-auto object-cover'
+                  width={700} // ajuste conforme necessário
+                  height={500} // ajuste conforme necessário
+                  className='object-cover'
                 />
                 <div className='p-4 text-center'>
                   <h3 className='text-xl font-bold mb-2'>{slide.title}</h3>
