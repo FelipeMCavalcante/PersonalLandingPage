@@ -4,7 +4,7 @@
 import Contra from '@/app/components/Contra';
 import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
-// import Insta from '@/app/components/Insta';
+import Packs from '@/app/components/Packs';
 // import Contact from '@/app/components/Contact';
 // import Projects from '@/app/components/Projects';
 import Us from '@/app/components/Us';
@@ -17,7 +17,7 @@ export default function Home() {
       <Contra />
       <Us />
       {/* <Services /> */}
-      {/* <Packs /> */}
+      <Packs />
       {/* <Forms /> */}
       {/* <Depoimentos /> */}
       {/* <Duvidas /> */}
