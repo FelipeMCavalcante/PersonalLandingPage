@@ -1,11 +1,11 @@
-// import Artist from '@/app/components/Artist';
+import Forms from '@/app/components/Forms';
 // import Events from '@/app/components/Events';
 // import Footer from '@/app/components/Footer';
 import Contra from '@/app/components/Contra';
+import Depoimentos from '@/app/components/Depoimentos';
 import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
 import Packs from '@/app/components/Packs';
-// import Contact from '@/app/components/Contact';
 // import Projects from '@/app/components/Projects';
 import Us from '@/app/components/Us';
 
@@ -18,8 +18,8 @@ export default function Home() {
       <Us />
       {/* <Services /> */}
       <Packs />
-      {/* <Forms /> */}
-      {/* <Depoimentos /> */}
+      <Forms />
+      <Depoimentos />
       {/* <Duvidas /> */}
       {/* <Footer /> */}
     </main>

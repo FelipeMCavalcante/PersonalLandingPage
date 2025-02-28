@@ -1,4 +1,5 @@
 'use client';
+
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { useCallback } from 'react';
@@ -10,20 +11,7 @@ interface Slide {
 }
 
 export default function Events() {
-  // Opções de configuração do Embla
-  const OPTIONS = {
-    loop: true,
-    dragFree: true,
-    slidesToScroll: 1,
-    containScroll: 'trimSnaps',
-    breakpoints: {
-      '(min-width: 1024px)': { slidesToScroll: 3 },
-      '(min-width: 768px) and (max-width: 1023px)': { slidesToScroll: 2 },
-      '(max-width: 767px)': { slidesToScroll: 1 },
-    },
-  };
-
-  // Dados de exemplo
+  // Slides de exemplo
   const slidesData: Slide[] = [
     {
       src: '/pack.png',
@@ -47,19 +35,19 @@ export default function Events() {
       src: '/pack.png',
       title: 'Nome do pacote 4',
       description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam cursus. Lorem ipsum dolor sit amet consectetur.',
+        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id também.',
     },
     {
       src: '/pack.png',
       title: 'Nome do pacote 5',
       description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam cursus. Lorem ipsum dolor sit amet consectetur.',
+        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id também.',
     },
     {
       src: '/pack.png',
       title: 'Nome do pacote 6',
       description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam cursus. Lorem ipsum dolor sit amet consectetur.',
+        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id também.',
     },
   ];
 
@@ -77,32 +65,49 @@ export default function Events() {
       </div>
 
       {/* Carrossel */}
-      <EmblaCarousel slides={slidesData} options={OPTIONS} />
+      <EmblaCarousel slides={slidesData} />
     </div>
   );
 }
 
+// ----------------------------------------
 // Componente do Carrossel
-function EmblaCarousel({
-  slides,
-  options,
-}: {
-  slides: Slide[];
-  options: Record<string, unknown>;
-}) {
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+// ----------------------------------------
+function EmblaCarousel({ slides }: { slides: Slide[] }) {
+  // Ajuste para ativar o loop
+  const OPTIONS = {
+    loop: true, // ativando o loop
+    slidesToScroll: 1,
+    containScroll: 'trimSnaps' as const,
+    // dragFree: false, // Se não quiser dragFree, pode remover ou deixar comentado
+  };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className='overflow-hidden relative pb-6'>
+    <section className='relative pb-6 max-w-[90%] mx-auto px-4'>
       {/* Botão "Anterior" */}
       <button
         onClick={scrollPrev}
-        className='absolute left-0 top-1/2 transform -translate-y-1/2 text-black w-10 h-10 flex items-center justify-center rounded-full z-10 shadow-md bg-white'
+        className='absolute left-2 top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
+        aria-label='Anterior'
       >
-        ❮
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='40'
+          height='40'
+          fill='none'
+          stroke='currentColor'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          viewBox='0 0 24 24'
+        >
+          <polyline points='15 18 9 12 15 6'></polyline>
+        </svg>
       </button>
 
       {/* Área de slides */}
@@ -111,16 +116,15 @@ function EmblaCarousel({
           {slides.map((slide, index) => (
             <div
               key={index}
-              // Ajuste a largura conforme o layout desejado
-              className='flex-[0_0_80%] md:flex-[0_0_50%] lg:flex-[0_0_25%] px-2'
+              className='flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.3333%] px-2'
             >
               {/* Card */}
               <div className='bg-white border rounded-lg shadow-md overflow-hidden'>
                 <Image
                   src={slide.src}
                   alt={slide.title}
-                  width={700} // ajuste conforme necessário
-                  height={500} // ajuste conforme necessário
+                  width={700}
+                  height={500}
                   className='object-cover'
                 />
                 <div className='p-4 text-center'>
@@ -128,7 +132,7 @@ function EmblaCarousel({
                   <p className='text-sm text-gray-600 mb-4'>
                     {slide.description}
                   </p>
-                  <button className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'>
+                  <button className='bg-white border-black border-2 text-black px-4 py-2 rounded-lg hover:bg-gray-400'>
                     Saiba mais
                   </button>
                 </div>
@@ -141,9 +145,22 @@ function EmblaCarousel({
       {/* Botão "Próximo" */}
       <button
         onClick={scrollNext}
-        className='absolute right-0 top-1/2 transform -translate-y-1/2 text-black w-10 h-10 flex items-center justify-center rounded-full z-10 shadow-md bg-white'
+        className='absolute right-2 top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
+        aria-label='Próximo'
       >
-        ❯
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='40'
+          height='40'
+          fill='none'
+          stroke='currentColor'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          viewBox='0 0 24 24'
+        >
+          <polyline points='9 18 15 12 9 6'></polyline>
+        </svg>
       </button>
     </section>
   );
