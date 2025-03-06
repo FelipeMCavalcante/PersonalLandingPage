@@ -107,27 +107,27 @@ export default function Depoimentos() {
       id='Depoimentos'
     >
       <div className='w-full px-8'>
-        <div className='flex flex-col md:flex-row items-start '>
-          <div className='md:w-1/3 flex flex-col justify-center text-white h-[700px]'>
-            <p className='text-[80px] font-robotoB mt-10 text-white'>
+        <div className='flex flex-col md:flex-row place-items-center '>
+          <div className='md:w-2/3 flex flex-col justify-center text-white h-auto max-[920px]:mb-0 max-[920px]:text-center'>
+            <p className='text-[80px] max-[920px]:text-[60px] font-robotoB mt-10 text-white pr-10'>
               DEPOIMENTOS
             </p>
             <p className='mt-6 leading-relaxed font-robotoR'>
-              Aqui você pode colocar uma breve descrição dos depoimentos, o
-              contexto ou qualquer informação adicional.
+              Lorem ipsum dolor sit amet consectetur. Est nullam laoreet et
+              luctus. Elit habitant amet penatibus adipiscing amet rhoncus.
             </p>
           </div>
 
           <div className='md:w-2/3 relative'>
             <div
               ref={scrollContainerRef}
-              className='relative bg-center bg-cover bg-fixed rounded-lg h-[700px] overflow-y-auto no-scrollbar z-10'
+              className='relative bg-center bg-cover bg-fixed rounded-lg h-[600px] overflow-y-auto no-scrollbar z-10'
               style={{
                 backgroundImage:
                   "url('https://images.pexels.com/photos/13981027/pexels-photo-13981027.jpeg')",
               }}
             >
-              <div className='columns-1 md:columns-2 gap-3'>
+              <div className='columns-1 xl:columns-2 gap-3'>
                 {DEPOIMENTOS_DATA.map((item, index) => {
                   const isLast = index === DEPOIMENTOS_DATA.length - 1;
                   return (

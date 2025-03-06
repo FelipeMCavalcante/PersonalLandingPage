@@ -51,7 +51,7 @@ export default function FaleConosco() {
   return (
     <section className='w-full bg-gray-100 py-8'>
       <div className='flex justify-center'>
-        <p className='text-[80px] font-bold mt-10 text-[#030303]'>PACOTES</p>
+        <p className='text-[80px] font-bold mt-10 text-[#030303]'>FORMULÁRIO</p>
       </div>
 
       <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center'>
@@ -141,7 +141,7 @@ export default function FaleConosco() {
           </div>
 
           {/* Botão de envio */}
-          <div className='flex justify-end'>
+          <div className='flex justify-center md:justify-end'>
             <button
               type='submit'
               className='bg-[#01C2CB] hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-400'

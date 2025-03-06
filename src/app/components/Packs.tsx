@@ -70,9 +70,6 @@ export default function Events() {
   );
 }
 
-// ----------------------------------------
-// Componente do Carrossel
-// ----------------------------------------
 function EmblaCarousel({ slides }: { slides: Slide[] }) {
   // Ajuste para ativar o loop
   const OPTIONS = {
@@ -92,7 +89,7 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
       {/* Botão "Anterior" */}
       <button
         onClick={scrollPrev}
-        className='absolute left-2 top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
+        className='absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
         aria-label='Anterior'
       >
         <svg
@@ -145,7 +142,7 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
       {/* Botão "Próximo" */}
       <button
         onClick={scrollNext}
-        className='absolute right-2 top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
+        className='absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
         aria-label='Próximo'
       >
         <svg
