@@ -6,66 +6,78 @@ export default function Contra() {
   return (
     <>
       <div className='py-8 px-4'>
-        <div className='grid grid-cols-3 gap-4 max-[375px]:grid-cols-2 md:flex md:justify-evenly'>
+        <div className='grid grid-cols-3 gap-4 max-[375px]:grid-cols-2 md:flex md:justify-evenly items-start font-robotoR leading-[1px]'>
           <div className='text-center'>
             <Image
-              src='/p1.png'
+              src='/clock.svg'
               alt=''
               className='mx-auto'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
-            <a href=''>LOREM</a>
+            <a className=' text-black text-sm '>
+              Atendimento <br></br>24 horas
+            </a>
           </div>
           <div className='text-center'>
             <Image
-              src='/p1.png'
+              src='/aviao32.svg'
               alt=''
               className='mx-auto'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
-            <a href=''>LOREM</a>
+            <a className='text-black text-sm'>
+              Especialistas em <br></br>turismo para<br></br> artistas e eventos
+            </a>
           </div>
           <div className='text-center'>
             <Image
-              src='/p1.png'
+              src='/maos32.svg'
               alt=''
               className='mx-auto'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
-            <a href=''>LOREM</a>
+            <a className='text-black text-sm '>
+              Atendimento <br></br>exclusivo <br></br>e personalizado
+            </a>
           </div>
           <div className='text-center'>
             <Image
-              src='/p1.png'
+              src='/dinheiro.svg'
               alt=''
               className='mx-auto'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
-            <a href=''>LOREM</a>
+            <a className='text-black text-sm'>
+              Otimização <br></br>de custo
+            </a>
           </div>
           <div className='text-center'>
             <Image
-              src='/p1.png'
+              src='/hotel.svg'
               alt=''
               className='mx-auto'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
-            <a href=''>LOREM</a>
+            <a className='text-black text-sm'>
+              Parcerias <br></br>exclusivas
+            </a>
           </div>
           <div className='text-center'>
             <Image
-              src='/p1.png'
+              src='/ingresso.svg'
               alt=''
               className='mx-auto'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
-            <a href=''>LOREM</a>
+            <a className='text-black text-sm'>
+              Experiências<br></br> exclusivas
+            </a>
           </div>
         </div>
       </div>

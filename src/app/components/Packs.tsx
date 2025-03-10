@@ -52,12 +52,14 @@ export default function Events() {
   ];
 
   return (
-    <div className='bg-gray-100' id='Events'>
+    <div className='bg-[#ffff]' id='Events'>
       <div className='flex justify-center'>
-        <p className='text-[80px] font-bold mt-10 text-[#030303]'>PACOTES</p>
+        <p className='text-[80px] font-bold mt-10 text-[#030303]  max-[920px]:text-[60px] font-robotoB'>
+          PACOTES
+        </p>
       </div>
 
-      <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center'>
+      <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center max-[920px]:text-base font-robotoR'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
           autem hic pariatur doloribus veritatis.

@@ -109,16 +109,16 @@ export default function Depoimentos() {
       <div className='w-full px-8'>
         <div className='flex flex-col md:flex-row place-items-center '>
           <div className='md:w-2/3 flex flex-col justify-center text-white h-auto max-[920px]:mb-0 max-[920px]:text-center'>
-            <p className='text-[80px] max-[920px]:text-[60px] font-robotoB mt-10 text-white pr-10'>
+            <p className='text-[80px] max-[920px]:text-[60px] font-robotoB mt-10 text-white md:pr-10'>
               DEPOIMENTOS
             </p>
-            <p className='mt-6 leading-relaxed font-robotoR'>
+            <p className='mt-6 leading-relaxed font-robotoR mx-4 mb-4 md:mb-0'>
               Lorem ipsum dolor sit amet consectetur. Est nullam laoreet et
               luctus. Elit habitant amet penatibus adipiscing amet rhoncus.
             </p>
           </div>
 
-          <div className='md:w-2/3 relative'>
+          <div className='md:w-3/3 relative'>
             <div
               ref={scrollContainerRef}
               className='relative bg-center bg-cover bg-fixed rounded-lg h-[600px] overflow-y-auto no-scrollbar z-10'

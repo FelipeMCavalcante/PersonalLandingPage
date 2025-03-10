@@ -1,5 +1,5 @@
 import Forms from '@/app/components/Forms';
-// import Events from '@/app/components/Events';
+import Services from '@/app/components/Services';
 // import Footer from '@/app/components/Footer';
 import Contra from '@/app/components/Contra';
 import Depoimentos from '@/app/components/Depoimentos';
@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <Contra />
       <Us />
-      {/* <Services /> */}
+      <Services />
       <Packs />
       <Forms />
       <Depoimentos />

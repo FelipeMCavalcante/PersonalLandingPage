@@ -51,7 +51,9 @@ export default function FaleConosco() {
   return (
     <section className='w-full bg-gray-100 py-8'>
       <div className='flex justify-center'>
-        <p className='text-[80px] font-bold mt-10 text-[#030303]'>FORMULÁRIO</p>
+        <p className='text-[80px] font-bold mt-10 text-[#030303]  max-[920px]:text-[60px] font-robotoB '>
+          FORMULÁRIO
+        </p>
       </div>
 
       <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center'>
