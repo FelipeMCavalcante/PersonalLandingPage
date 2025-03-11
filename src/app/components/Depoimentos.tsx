@@ -1,5 +1,6 @@
 'use client';
 import '@/app/globals.css';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 const DEPOIMENTOS_DATA = [
@@ -67,6 +68,13 @@ export default function Depoimentos() {
 
   // Usamos IntersectionObserver para detectar quando o último depoimento está 100% visível
   useEffect(() => {
+    // Armazena o valor atual das refs em variáveis locais
+    const containerElement = scrollContainerRef.current;
+    const lastTestimonialElement = lastTestimonialRef.current;
+
+    // Se não existir container ou último depoimento, não faz nada
+    if (!containerElement || !lastTestimonialElement) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -76,21 +84,18 @@ export default function Depoimentos() {
         }
       },
       {
-        root: scrollContainerRef.current,
+        root: containerElement,
         threshold: 1.0,
       }
     );
 
-    if (lastTestimonialRef.current) {
-      observer.observe(lastTestimonialRef.current);
-    }
+    observer.observe(lastTestimonialElement);
 
     return () => {
-      if (lastTestimonialRef.current) {
-        observer.unobserve(lastTestimonialRef.current);
-      }
+      observer.unobserve(lastTestimonialElement);
     };
-  }, [scrollContainerRef.current]);
+  }, []); // Array vazio para rodar apenas uma vez
+
   const handleScrollDown = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
@@ -107,7 +112,8 @@ export default function Depoimentos() {
       id='Depoimentos'
     >
       <div className='w-full px-8'>
-        <div className='flex flex-col md:flex-row place-items-center '>
+        <div className='flex flex-col md:flex-row place-items-center'>
+          {/* Texto e título */}
           <div className='md:w-2/3 flex flex-col justify-center text-white h-auto max-[920px]:mb-0 max-[920px]:text-center'>
             <p className='text-[80px] max-[920px]:text-[60px] font-robotoB mt-10 text-white md:pr-10'>
               DEPOIMENTOS
@@ -118,6 +124,7 @@ export default function Depoimentos() {
             </p>
           </div>
 
+          {/* Container dos depoimentos */}
           <div className='md:w-3/3 relative'>
             <div
               ref={scrollContainerRef}
@@ -136,9 +143,11 @@ export default function Depoimentos() {
                       ref={isLast ? lastTestimonialRef : null}
                       className='mb-4 break-inside-avoid bg-white rounded-3xl shadow p-6 inline-block w-full'
                     >
-                      <img
+                      <Image
                         src={item.icon}
                         alt={`Ícone do depoimento ${index}`}
+                        width={48}
+                        height={48}
                         className='w-12 h-12 mb-4'
                       />
                       <p className='text-gray-700 mb-4'>{item.text}</p>
@@ -149,18 +158,27 @@ export default function Depoimentos() {
                 })}
               </div>
             </div>
+
+            {/* Seta para scroll, aparece enquanto não está no final */}
             {!isAtBottom && (
               <>
-                <img
-                  src='/div.png'
-                  alt='Degradê no rodapé'
-                  className='pointer-events-none absolute bottom-0 left-0 w-full h-[220px] z-20 object-cover'
-                />
+                {/* Degradê no rodapé */}
+                <div className='pointer-events-none absolute bottom-0 left-0 w-full h-[220px] z-20'>
+                  <Image
+                    src='/div.png'
+                    alt='Degradê no rodapé'
+                    fill
+                    className='object-cover'
+                  />
+                </div>
+
                 <div className='flex justify-center items-center relative z-30'>
-                  <img
-                    src='setadepoimentos.png'
+                  <Image
+                    src='/setadepoimentos.png'
                     alt='Seta'
                     onClick={handleScrollDown}
+                    width={50}
+                    height={50}
                     className='cursor-pointer hover:opacity-75 transition mt-5'
                   />
                 </div>
