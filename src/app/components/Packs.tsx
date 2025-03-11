@@ -11,7 +11,6 @@ interface Slide {
 }
 
 export default function Events() {
-  // Slides de exemplo
   const slidesData: Slide[] = [
     {
       src: '/pack.png',
@@ -66,19 +65,16 @@ export default function Events() {
         </p>
       </div>
 
-      {/* Carrossel */}
       <EmblaCarousel slides={slidesData} />
     </div>
   );
 }
 
 function EmblaCarousel({ slides }: { slides: Slide[] }) {
-  // Ajuste para ativar o loop
   const OPTIONS = {
-    loop: true, // ativando o loop
+    loop: true,
     slidesToScroll: 1,
     containScroll: 'trimSnaps' as const,
-    // dragFree: false, // Se não quiser dragFree, pode remover ou deixar comentado
   };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
@@ -88,7 +84,6 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
 
   return (
     <section className='relative pb-6 max-w-[90%] mx-auto px-4'>
-      {/* Botão "Anterior" */}
       <button
         onClick={scrollPrev}
         className='absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
@@ -109,7 +104,6 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
         </svg>
       </button>
 
-      {/* Área de slides */}
       <div className='overflow-hidden w-full' ref={emblaRef}>
         <div className='flex'>
           {slides.map((slide, index) => (
@@ -117,7 +111,6 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
               key={index}
               className='flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.3333%] px-2'
             >
-              {/* Card */}
               <div className='bg-white border rounded-lg shadow-md overflow-hidden'>
                 <Image
                   src={slide.src}
@@ -141,7 +134,6 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
         </div>
       </div>
 
-      {/* Botão "Próximo" */}
       <button
         onClick={scrollNext}
         className='absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
