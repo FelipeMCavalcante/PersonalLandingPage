@@ -5,15 +5,15 @@ import Image from 'next/image';
 export default function Contra() {
   return (
     <>
-      <div className='py-8 px-4'>
+      <div className='py-6 px-4'>
         <div className='grid grid-cols-3 gap-4 max-[375px]:grid-cols-2 md:flex md:justify-evenly items-start font-robotoR leading-[1px]'>
           <div className='text-center'>
             <Image
               src='/clock.svg'
               alt=''
               className='mx-auto'
-              width={80}
-              height={80}
+              width={25}
+              height={25}
             />
             <a className=' text-black text-sm '>
               Atendimento <br></br>24 horas
@@ -24,8 +24,8 @@ export default function Contra() {
               src='/aviao32.svg'
               alt=''
               className='mx-auto'
-              width={80}
-              height={80}
+              width={25}
+              height={25}
             />
             <a className='text-black text-sm'>
               Especialistas em <br></br>turismo para<br></br> artistas e eventos
@@ -36,8 +36,8 @@ export default function Contra() {
               src='/maos32.svg'
               alt=''
               className='mx-auto'
-              width={80}
-              height={80}
+              width={25}
+              height={25}
             />
             <a className='text-black text-sm '>
               Atendimento <br></br>exclusivo <br></br>e personalizado
@@ -48,8 +48,8 @@ export default function Contra() {
               src='/dinheiro.svg'
               alt=''
               className='mx-auto'
-              width={80}
-              height={80}
+              width={25}
+              height={25}
             />
             <a className='text-black text-sm'>
               Otimização <br></br>de custo
@@ -60,8 +60,8 @@ export default function Contra() {
               src='/hotel.svg'
               alt=''
               className='mx-auto'
-              width={80}
-              height={80}
+              width={25}
+              height={25}
             />
             <a className='text-black text-sm'>
               Parcerias <br></br>exclusivas
@@ -72,8 +72,8 @@ export default function Contra() {
               src='/ingresso.svg'
               alt=''
               className='mx-auto'
-              width={80}
-              height={80}
+              width={25}
+              height={25}
             />
             <a className='text-black text-sm'>
               Experiências<br></br> exclusivas
