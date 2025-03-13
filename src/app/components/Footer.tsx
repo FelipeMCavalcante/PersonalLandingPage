@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/app/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -29,38 +30,41 @@ export default function Footer() {
           <p className='text-[18px] text-[#C9E165] font-black font-robotoB'>
             NOSSO SISTEMA
           </p>
-          <a href='/#Us' className='text-lg mt-4 hover:opacity-50 font-robotoR'>
+          <Link
+            href='/#Us'
+            className='text-lg mt-4 hover:opacity-50 font-robotoR'
+          >
             QUEM SOMOS
-          </a>
-          <a
+          </Link>
+          <Link
             href='/#Services'
             className='text-lg mt-4 hover:opacity-50 font-robotoR'
           >
             SERVIÇOS
-          </a>
-          <a
+          </Link>
+          <Link
             href='/#Packs'
             className='text-lg mt-4 hover:opacity-50 font-robotoR'
           >
             PACOTES
-          </a>
+          </Link>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center lg:items-start mt-12 lg:mt-10 text-center lg:text-left'>
           <p className='text-[18px] text-[#C9E165] font-black font-robotoB'>
             CONTATOS
           </p>
-          <a
+          <Link
             href='/#Forms'
             className='text-lg mt-4 hover:opacity-50 font-robotoR'
           >
             FALE CONOSCO
-          </a>
-          <a
+          </Link>
+          <Link
             href='/#Duvidas'
             className='text-lg mt-4 hover:opacity-50 font-robotoR'
           >
             FAQ
-          </a>
+          </Link>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center mt-6 lg:mt-14  relative text-center lg:text-left'>
           <p className='text-base mt-10 text-[#C9E165] font-robotoB '>
@@ -99,7 +103,6 @@ export default function Footer() {
                 alt='Email'
               />
             </a>
-
             <a
               href='https://api.whatsapp.com/send?phone=556199498605&text=Ol%C3%A1!%20Acessei%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Instituto.%E2%84%83'
               target='_blank'
@@ -147,7 +150,7 @@ export default function Footer() {
                 className='transition-opacity duration-300 ease-in-out opacity-100 hover:opacity-0'
               />
               <Image
-                src='/capimhover.png' // Caminho para a imagem verde
+                src='/capimhover.png'
                 width={80}
                 height={50}
                 alt='Capim Logo Hover'
