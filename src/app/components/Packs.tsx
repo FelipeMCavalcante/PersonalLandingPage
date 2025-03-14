@@ -51,7 +51,7 @@ export default function Events() {
   ];
 
   return (
-    <div className='bg-[#ffff]' id='Events'>
+    <div className='bg-[#ffff]' id='Packs'>
       <div className='flex justify-center'>
         <p className='text-[80px] font-bold mt-10 text-[#030303]  max-[920px]:text-[60px] font-robotoB'>
           PACOTES

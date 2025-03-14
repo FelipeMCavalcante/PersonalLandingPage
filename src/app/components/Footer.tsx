@@ -143,14 +143,14 @@ export default function Footer() {
               className='relative inline-block'
             >
               <Image
-                src='/capim.png'
+                src='/capim2.svg'
                 width={80}
                 height={50}
                 alt='Capim Logo'
                 className='transition-opacity duration-300 ease-in-out opacity-100 hover:opacity-0'
               />
               <Image
-                src='/capimhover.png'
+                src='/capimhover2.svg'
                 width={80}
                 height={50}
                 alt='Capim Logo Hover'

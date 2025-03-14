@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Services() {
   return (
     <div
-      id='Events'
+      id='services'
       className="relative bg-[#EBEBEB] bg-[url('/setas.png')] bg-cover max-[920px]:bg-[url('/mobileback.png')]"
     >
       <div className='flex justify-center'>

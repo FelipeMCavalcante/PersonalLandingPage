@@ -49,7 +49,7 @@ export default function FaleConosco() {
   };
 
   return (
-    <section className='w-full bg-gray-100 py-8'>
+    <section className='w-full bg-gray-100 py-8' id='Forms'>
       <div className='flex justify-center'>
         <p className='text-[80px] font-bold mt-10 text-[#030303]  max-[920px]:text-[60px] font-robotoB '>
           FORMULÁRIO
