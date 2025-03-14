@@ -150,9 +150,9 @@ export const PORTFOLIO: Portfolio[] = [
   },
 ];
 
-export const WPP_NUMBER = '5585986075881';
+export const WPP_NUMBER = '5585984398566';
 export const WPP_MESSAGE =
-  'Ol%C3%A1!%20Acessei%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Instituto.%E2%84%83';
+  'Ol%C3%A1!%20Acessei%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20mais%20sobre';
 
 export const TOOLS = [
   { name: 'React', icon: <IoLogoReact />, category: ['Frontend'] },
