@@ -159,7 +159,6 @@ export default function Depoimentos() {
               </div>
             </div>
 
-            {/* Seta para scroll, aparece enquanto não está no final */}
             {!isAtBottom && (
               <>
                 {/* Degradê no rodapé */}
