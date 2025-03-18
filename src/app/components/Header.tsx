@@ -66,7 +66,7 @@ export default function Header() {
                     <Image
                       src={'/var.png'}
                       alt='VAR'
-                      width={145}
+                      width={195}
                       height={80}
                       className='object-contain'
                     />
