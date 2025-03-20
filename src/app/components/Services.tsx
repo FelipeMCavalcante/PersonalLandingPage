@@ -3,10 +3,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-// 1) Definimos os possíveis valores para a chave do serviço
 type ServiceKey = 'artistStaff' | 'showsEventos' | 'corporativas';
 
-// 2) (Opcional) Tipamos a estrutura de cada serviço
 type ServiceInfo = {
   title: string;
   description: string;
@@ -16,7 +14,6 @@ type ServiceInfo = {
   color: string;
 };
 
-// 3) Definimos o objeto de serviços usando Record
 const servicesData: Record<ServiceKey, ServiceInfo> = {
   artistStaff: {
     title: 'VIAGENS PARA ARTISTAS & STAFF',
@@ -24,7 +21,7 @@ const servicesData: Record<ServiceKey, ServiceInfo> = {
       'Gestão completa de transporte, hospedagem e logística para shows e turnês. Atendimento especializado para cantores, bandas e equipes. Planejamento de roteiros e otimização de deslocamentos.',
     buttonText: 'VER TODOS',
     label: 'ARTISTAS & STAFF',
-    image: '/staff.png',
+    image: '/artist.png',
     color: '#FE6150',
   },
   showsEventos: {
@@ -33,7 +30,7 @@ const servicesData: Record<ServiceKey, ServiceInfo> = {
       'Gestão de viagens para empresários, produtores e equipes. Reserva de hotéis e passagens com condições especiais. Atendimento personalizado para demandas do mundo dos negócios.',
     buttonText: 'VER TODOS',
     label: 'SHOWS & EVENTOS',
-    image: '/shows.png',
+    image: '/show.png',
     color: '#01C2CB',
   },
   corporativas: {
@@ -42,29 +39,20 @@ const servicesData: Record<ServiceKey, ServiceInfo> = {
       'Organização completa de viagens de negócios. Salas de reunião, traslados, hospedagem e todo suporte para executivos em trânsito.',
     buttonText: 'VER TODOS',
     label: 'CORPORATIVAS & EXECUTIVAS',
-    image: '/corp.png',
+    image: '/viagem.png',
     color: '#C9E165',
   },
 };
 
-// Componente principal
 export default function Services() {
-  // 4) Ajustamos o tipo do estado para ServiceKey | null
   const [selectedService, setSelectedService] = useState<ServiceKey | null>(
     null
   );
 
-  // 5) Ajustamos a função para receber a mesma tipagem
   const handleServiceClick = (service: ServiceKey) => {
     setSelectedService((prev) => (prev === service ? null : service));
   };
 
-  /**
-   * Componente para exibir detalhes de cada serviço.
-   * Recebe:
-   * - serviceKey (qual serviço está ativo)
-   * - onClose (função para fechar a caixinha)
-   */
   const ServiceBox = ({
     serviceKey,
     onClose,
@@ -72,7 +60,6 @@ export default function Services() {
     serviceKey: ServiceKey;
     onClose: () => void;
   }) => {
-    // O TypeScript agora sabe que serviceKey é uma das chaves de servicesData
     const { title, description, buttonText, color } = servicesData[serviceKey];
 
     return (
@@ -118,7 +105,13 @@ export default function Services() {
   return (
     <div
       id='services'
-      className="bg-[#EBEBEB] bg-[url('/setas.png')] bg-cover max-[920px]:bg-[url('/mobileback.png')]"
+      className="
+        bg-[#EBEBEB]
+        bg-[url('/setas.png')]
+        bg-no-repeat
+        max-[920px]:bg-[url('/mobileback.png')]
+        max-[920px]:bg-no-repeat
+      "
     >
       {/* Título e descrição */}
       <div className='flex justify-center'>
@@ -230,7 +223,7 @@ export default function Services() {
       {/* LAYOUT MOBILE (<= 920px) */}
       <div className='max-[920px]:block min-[921px]:hidden py-10 mt-6'>
         {/* 1) ARTISTAS & STAFF */}
-        <div className=' px-12'>
+        <div className='px-12'>
           <div
             className='relative flex items-center justify-end text-end cursor-pointer'
             onClick={() => handleServiceClick('artistStaff')}
@@ -270,7 +263,7 @@ export default function Services() {
         </div>
 
         {/* 2) SHOWS & EVENTOS */}
-        <div className=' px-12'>
+        <div className='px-12'>
           <div
             className='relative flex items-center justify-start cursor-pointer'
             onClick={() => handleServiceClick('showsEventos')}
