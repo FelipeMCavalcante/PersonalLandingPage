@@ -7,10 +7,10 @@ export default function Footer() {
   return (
     <>
       <section
-        className='flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between p-6 lg:p-20 bg-black text-white relative font-proximanova'
+        className='flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between p-6  lg:p-20 bg-black text-white relative font-proximanova'
         id='Footer'
       >
-        <div className='w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left font-robotoB'>
+        <div className='w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left font-robotoB lg:pl-12'>
           <Image
             src={'/varbranco.svg'}
             width={180}

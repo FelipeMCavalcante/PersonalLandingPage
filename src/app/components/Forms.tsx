@@ -56,7 +56,7 @@ export default function FaleConosco() {
         </p>
       </div>
 
-      <div className='text-[#0F0F0F] justify-center flex font-robotoR text-sm p-5 text-center'>
+      <div className='text-[#0F0F0F] justify-center flex font-robotoR text-sm p-5 lg:px-[120px] text-center'>
         <p>
           Lorem ipsum dolor sit amet consectetur. Est nullam laoreet et luctus.
           Elit habitant amet penatibus adipiscing amet rhoncus non placerat.
@@ -67,7 +67,7 @@ export default function FaleConosco() {
       </div>
       <div>
         {/* Formulário */}
-        <form onSubmit={handleSubmit} className='px-6 md:px-8 text-base'>
+        <form onSubmit={handleSubmit} className='px-6 md:px-[120px] text-base'>
           {/* Linha 1: Nome e E-mail */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
             <input
@@ -102,7 +102,7 @@ export default function FaleConosco() {
               name='motivo'
               value={formData.motivo}
               onChange={handleChange}
-              className="w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 text-gray-700 font-robotoR appearance-none bg-[url('/seta.png')] bg-no-repeat bg-[position:calc(100%-24px)_center]"
+              className="w-full p-3  rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 text-gray-700 font-robotoR appearance-none bg-[url('/seta.png')] bg-no-repeat bg-[position:calc(100%-24px)_center]"
             >
               <option value=''>SELECIONAR MOTIVO</option>
               <option value='Duvida'>Dúvida</option>
@@ -140,7 +140,7 @@ export default function FaleConosco() {
               />
               <label
                 htmlFor='aceitarComunicacoes'
-                className='text-[18px] text-gray-700 cursor-pointer font-robotoB'
+                className='text-[18px] text-gray-700 cursor-pointer font-robotoB pr-8'
               >
                 Aceito receber comunicações da Var Viagens via e-mail
               </label>

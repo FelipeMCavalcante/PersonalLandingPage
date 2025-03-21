@@ -47,7 +47,9 @@ const Duvidas: React.FC = () => {
       id='Duvidas'
     >
       <div className='lg:my-12 flex items-center justify-center w-full text-[30px] lg:text-4xl'>
-        <h1 className='text-black font-robotoB'>DÚVIDAS FREQUENTES</h1>
+        <h1 className='text-black font-robotoB text-center'>
+          DÚVIDAS FREQUENTES
+        </h1>
       </div>
       <div className='lg:w-full pt-8 lg:pt-0 sm:ml-16 lg:ml-16 mb-12 text-xs'>
         <FAQAccordion questions={questions} />

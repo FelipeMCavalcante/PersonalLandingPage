@@ -10,7 +10,7 @@ export default function Us() {
           <Image src='logo.svg' alt='' width={550} height={550} />
         </div>
         <div className='text-base leading-relaxed text-gray-800 font-medium text-center md:text-left'>
-          <p className='text-[16px] font-outfitregular'>
+          <p className='text-[16px] font-outfitregular text-justify lg:pr-[70px] '>
             Fundada em maio de 2022, a VAR Viagens tem se destacado no mercado
             de turismo ao oferecer um serviço especializado e totalmente
             personalizado para atender artistas e executivos. Nosso objetivo?

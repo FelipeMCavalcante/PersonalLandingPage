@@ -102,7 +102,7 @@ export default function Depoimentos() {
       className='bg-[#01C2CB] py-10 flex items-center justify-center'
       id='Depoimentos'
     >
-      <div className='w-full px-8'>
+      <div className='w-full px-6 lg:px-[120px]'>
         <div className='flex flex-col md:flex-row place-items-center'>
           {/* Texto e título */}
           <div className='md:w-2/3 flex flex-col justify-center text-white h-auto max-[920px]:mb-0 max-[920px]:text-center'>
@@ -116,7 +116,7 @@ export default function Depoimentos() {
           </div>
 
           {/* Container dos depoimentos */}
-          <div className='md:w-2/3 relative'>
+          <div className='md:w-80% relative'>
             <div
               ref={scrollContainerRef}
               className='relative bg-center bg-cover bg-fixed rounded-lg h-[420px] overflow-y-auto no-scrollbar z-10'
