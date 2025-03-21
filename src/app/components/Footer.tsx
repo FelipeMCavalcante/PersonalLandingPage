@@ -18,13 +18,13 @@ export default function Footer() {
             alt='Logo Instituto.CC'
           />
           <p className='text-sm mt-4'>VAR VIAGENS LTDA</p>
-          <p className='text-sm mt-2'>CNPJ:  00.000.000/0001-00 </p>
+          <p className='text-sm mt-2'>CNPJ:  46.534.552/0001/80 </p>
           <p className='text-sm mt-2'>
-            Logradoro, 0000, Bloco A,
+            Av Washington Soares, 3663
             <br />
-            Bairro - Cidade - UF - 00000-00
+            Fortaleza - CE
           </p>
-          <p className='text-sm mt-2'>lorem@email.com</p>
+          <p className='text-sm mt-2'>atendimento@varviagens.com.br</p>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center lg:items-start mt-12 lg:mt-10 text-center lg:text-left'>
           <p className='text-[18px] text-[#C9E165] font-black font-robotoB'>
