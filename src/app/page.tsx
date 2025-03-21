@@ -5,9 +5,10 @@ import Footer from '@/app/components/Footer';
 import Forms from '@/app/components/Forms';
 import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
-import Packs from '@/app/components/Packs';
+// import Packs from '@/app/components/Packs';
 import Services from '@/app/components/Services';
 import Us from '@/app/components/Us';
+import WhatsApp from '@/app/components/WhatsApp';
 
 export default function Home() {
   return (
@@ -17,11 +18,12 @@ export default function Home() {
       <Contra />
       <Us />
       <Services />
-      <Packs />
+      {/* <Packs /> */}
       <Forms />
       <Depoimentos />
       <Duvidas />
       <Footer />
+      <WhatsApp />
     </main>
   );
 }

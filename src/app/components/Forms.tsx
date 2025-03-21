@@ -49,22 +49,25 @@ export default function FaleConosco() {
   };
 
   return (
-    <section className='w-full bg-gray-100 py-8'>
+    <section className='w-full bg-gray-100 py-8' id='Forms'>
       <div className='flex justify-center'>
-        <p className='text-[80px] font-bold mt-10 text-[#030303]  max-[920px]:text-[60px] font-robotoB '>
-          FORMULÁRIO
+        <p className='text-4xl text-[#0F0F0F] font-bold mt-10 max-[920px]:text-[24px] font-robotoB'>
+          FALE CONOSCO
         </p>
       </div>
 
-      <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center'>
+      <div className='text-[#0F0F0F] justify-center flex font-robotoR text-sm p-5 text-center'>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-          autem hic pariatur doloribus veritatis.
+          Lorem ipsum dolor sit amet consectetur. Est nullam laoreet et luctus.
+          Elit habitant amet penatibus adipiscing amet rhoncus non placerat.
+          Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam
+          cursus. Lorem ipsum dolor sit amet consectetur. Est nullam laoreet et
+          luctus. Elit habitant amet penatibus adipiscing.
         </p>
       </div>
       <div>
         {/* Formulário */}
-        <form onSubmit={handleSubmit} className='p-6 md:p-8 shadow rounded'>
+        <form onSubmit={handleSubmit} className='px-6 md:px-8 text-base'>
           {/* Linha 1: Nome e E-mail */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
             <input
@@ -73,7 +76,7 @@ export default function FaleConosco() {
               value={formData.nome}
               onChange={handleChange}
               placeholder='NOME'
-              className='w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
             />
             <input
               type='email'
@@ -81,25 +84,25 @@ export default function FaleConosco() {
               value={formData.email}
               onChange={handleChange}
               placeholder='E-MAIL'
-              className='w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
             />
           </div>
 
           {/* Linha 2: WhatsApp e Motivo */}
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-base'>
             <input
               type='text'
               name='whatsapp'
               value={formData.whatsapp}
               onChange={handleChange}
               placeholder='WHATSAPP'
-              className='w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
             />
             <select
               name='motivo'
               value={formData.motivo}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 text-gray-700 font-robotoR appearance-none bg-[url('/seta.png')] bg-no-repeat bg-[position:calc(100%-24px)_center]"
+              className="w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 text-gray-700 font-robotoR appearance-none bg-[url('/seta.png')] bg-no-repeat bg-[position:calc(100%-24px)_center]"
             >
               <option value=''>SELECIONAR MOTIVO</option>
               <option value='Duvida'>Dúvida</option>
@@ -116,34 +119,32 @@ export default function FaleConosco() {
               onChange={handleChange}
               placeholder='DIGITE SUA MENSAGEM'
               rows={4}
-              className='w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500 text-base'
             />
           </div>
 
-          {/* Checkbox (substituído por MUI Checkbox) */}
-          <div className='flex items-center space-x-2 mb-6'>
-            <Checkbox
-              id='aceitarComunicacoes'
-              name='aceitarComunicacoes'
-              checked={formData.aceitarComunicacoes}
-              onChange={handleChange}
-              sx={{
-                color: blue[800],
-                '&.Mui-checked': {
-                  color: blue[600],
-                },
-              }}
-            />
-            <label
-              htmlFor='aceitarComunicacoes'
-              className='text-[18px] text-gray-700 cursor-pointer font-robotoB'
-            >
-              Aceito receber comunicações da Var Viagens via e-mail
-            </label>
-          </div>
-
-          {/* Botão de envio */}
-          <div className='flex justify-center md:justify-end'>
+          {/* Checkbox e botão de envio na mesma linha */}
+          <div className='flex items-center justify-between mb-6'>
+            <div className='flex items-center space-x-2'>
+              <Checkbox
+                id='aceitarComunicacoes'
+                name='aceitarComunicacoes'
+                checked={formData.aceitarComunicacoes}
+                onChange={handleChange}
+                sx={{
+                  color: blue[800],
+                  '&.Mui-checked': {
+                    color: blue[600],
+                  },
+                }}
+              />
+              <label
+                htmlFor='aceitarComunicacoes'
+                className='text-[18px] text-gray-700 cursor-pointer font-robotoB'
+              >
+                Aceito receber comunicações da Var Viagens via e-mail
+              </label>
+            </div>
             <button
               type='submit'
               className='bg-[#01C2CB] hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-400'

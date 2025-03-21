@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 export default function Us() {
   return (
-    <div className='bg-white p-8 mt-10 pb-40' id='Us'>
+    <div className='bg-white p-8 mt-10 pb-20' id='Us'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
         <div className='flex justify-center'>
           <Image src='logo.svg' alt='' width={550} height={550} />
         </div>
         <div className='text-base leading-relaxed text-gray-800 font-medium text-center md:text-left'>
-          <p className='text-[20px] font-outfitregular'>
+          <p className='text-[16px] font-outfitregular'>
             Fundada em maio de 2022, a VAR Viagens tem se destacado no mercado
             de turismo ao oferecer um serviço especializado e totalmente
             personalizado para atender artistas e executivos. Nosso objetivo?
