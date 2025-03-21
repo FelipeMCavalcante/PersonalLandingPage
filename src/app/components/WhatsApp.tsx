@@ -12,8 +12,8 @@ export default function WhatsApp() {
         <Image
           className='w-12 h-12 lg:w-20 lg:h-20'
           src={'/whatsapp.svg'}
-          height={80}
-          width={80}
+          height={68}
+          width={68}
           alt='Contate-nos'
         />
       </a>

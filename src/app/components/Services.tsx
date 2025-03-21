@@ -106,12 +106,15 @@ export default function Services() {
     <div
       id='services'
       className="
-        bg-[#EBEBEB]
-        bg-[url('/setas.png')]
-        bg-no-repeat
-        max-[920px]:bg-[url('/mobileback.png')]
-        max-[920px]:bg-no-repeat
-      "
+    bg-[#EBEBEB]
+    bg-[url('/setas.png')]
+    bg-no-repeat
+    bg-bottom
+    bg-[length:1300px]
+    max-[920px]:bg-[url('/mobileback.png')]
+    max-[920px]:bg-no-repeat
+    max-[920px]:bg-[length:300px]
+  "
     >
       {/* Título e descrição */}
       <div className='flex justify-center'>
