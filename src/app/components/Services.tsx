@@ -130,7 +130,7 @@ export default function Services() {
       </div>
 
       {/* LAYOUT DESKTOP (>= 921px) */}
-      <div className='hidden min-[921px]:flex flex-row justify-center gap-8 py-10 mt-6 text-base'>
+      <div className='hidden min-[921px]:flex flex-row justify-center gap-[90px] py-10 mt-6 text-base'>
         {/* 1) ARTISTAS & STAFF */}
         <div className='flex items-start'>
           <div

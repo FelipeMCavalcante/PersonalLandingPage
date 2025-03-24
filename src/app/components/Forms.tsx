@@ -49,14 +49,14 @@ export default function FaleConosco() {
   };
 
   return (
-    <section className='w-full bg-gray-100 py-8' id='Forms'>
+    <section className='w-full bg-gray-100 py-8 md:px-[120px]' id='Forms'>
       <div className='flex justify-center'>
         <p className='text-4xl text-[#0F0F0F] font-bold mt-10 max-[920px]:text-[24px] font-robotoB'>
           FALE CONOSCO
         </p>
       </div>
 
-      <div className='text-[#0F0F0F] justify-center flex font-robotoR text-sm p-5 lg:px-[120px] text-center'>
+      <div className='text-[#0F0F0F] justify-center flex font-robotoR text-sm p-5 text-justify lg:text-center'>
         <p>
           Lorem ipsum dolor sit amet consectetur. Est nullam laoreet et luctus.
           Elit habitant amet penatibus adipiscing amet rhoncus non placerat.
@@ -67,7 +67,7 @@ export default function FaleConosco() {
       </div>
       <div>
         {/* Formulário */}
-        <form onSubmit={handleSubmit} className='px-6 md:px-[120px] text-base'>
+        <form onSubmit={handleSubmit} className='px-6 text-base'>
           {/* Linha 1: Nome e E-mail */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
             <input
