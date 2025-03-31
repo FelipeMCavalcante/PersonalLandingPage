@@ -42,12 +42,6 @@ export default function Footer() {
           >
             SERVIÇOS
           </Link>
-          <Link
-            href='/#Packs'
-            className='text-lg mt-4 hover:opacity-50 font-robotoR'
-          >
-            PACOTES
-          </Link>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center lg:items-start mt-12 lg:mt-10 text-center lg:text-left'>
           <p className='text-[18px] text-[#C9E165] font-black font-robotoB'>
