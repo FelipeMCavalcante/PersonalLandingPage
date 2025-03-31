@@ -64,10 +64,10 @@ export default function Header() {
                 <div className='flex flex-shrink-0 items-center xl:ml-8 sm:ml-0'>
                   <Link href='/'>
                     <Image
-                      src={'/var.png'}
+                      src={'/var.svg'}
                       alt='VAR'
-                      width={195}
-                      height={80}
+                      width={215}
+                      height={10}
                       className='object-contain'
                     />
                   </Link>
@@ -79,7 +79,7 @@ export default function Header() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className={`rounded-full px-4 text-sm  xl:text-xl lg:text-lg font-8 text-[#00121C] hover:text-[#FE6150] hover:border-primary-700 transition-colors duration-500 ease-in-out uppercase ${
+                        className={`rounded-full px-8 text-sm  xl:text-xl lg:text-lg font-8 text-[#00121C] hover:text-[#FE6150] hover:border-primary-700 transition-colors duration-500 ease-in-out uppercase ${
                           currentPath === item.href ? '#00121C text-white' : ''
                         }`}
                         aria-current={

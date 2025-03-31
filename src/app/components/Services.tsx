@@ -94,7 +94,11 @@ export default function Services() {
           className='w-32 h-8 px-4 py-3 rounded-lg inline-flex justify-center items-center gap-1.5 overflow-hidden'
           style={{ backgroundColor: color }}
         >
-          <div className='text-center text-stone-950 text-sm font-bold leading-tight'>
+          <div
+            className={`text-center text-sm font-bold leading-tight ${
+              serviceKey === 'corporativas' ? 'text-black' : 'text-white'
+            }`}
+          >
             {buttonText}
           </div>
         </div>
@@ -247,7 +251,7 @@ export default function Services() {
                   className='absolute left-1/2 -translate-x-1/2 w-[2px]'
                   style={{
                     bottom: '-9px',
-                    height: '22px',
+                    height: '12px',
                     backgroundColor: servicesData.artistStaff.color,
                   }}
                 />
@@ -283,7 +287,7 @@ export default function Services() {
                   className='absolute left-1/2 -translate-x-1/2 w-[2px]'
                   style={{
                     bottom: '-9px',
-                    height: '20px',
+                    height: '10px',
                     backgroundColor: servicesData.showsEventos.color,
                   }}
                 />
@@ -325,7 +329,7 @@ export default function Services() {
                   className='absolute left-1/2 -translate-x-1/2 w-[2px]'
                   style={{
                     bottom: '-9px',
-                    height: '22px',
+                    height: '12px',
                     backgroundColor: servicesData.corporativas.color,
                   }}
                 />
