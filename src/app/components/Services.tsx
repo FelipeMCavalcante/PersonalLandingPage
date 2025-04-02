@@ -60,7 +60,7 @@ export default function Services() {
     serviceKey: ServiceKey;
     onClose: () => void;
   }) => {
-    const { title, description, buttonText, color } = servicesData[serviceKey];
+    const { title, description, color } = servicesData[serviceKey];
 
     return (
       <div
