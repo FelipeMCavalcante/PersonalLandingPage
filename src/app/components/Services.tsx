@@ -90,18 +90,6 @@ export default function Services() {
         </div>
 
         {/* Botão com cor de fundo dinâmica */}
-        <div
-          className='w-32 h-8 px-4 py-3 rounded-lg inline-flex justify-center items-center gap-1.5 overflow-hidden'
-          style={{ backgroundColor: color }}
-        >
-          <div
-            className={`text-center text-sm font-bold leading-tight ${
-              serviceKey === 'corporativas' ? 'text-black' : 'text-white'
-            }`}
-          >
-            {buttonText}
-          </div>
-        </div>
       </div>
     );
   };
