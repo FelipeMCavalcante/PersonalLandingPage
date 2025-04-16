@@ -64,7 +64,7 @@ export default function Header() {
                 <div className='flex flex-shrink-0 items-center xl:ml-8 sm:ml-0'>
                   <Link href='/'>
                     <Image
-                      src={'/var.svg'}
+                      src={'/logopr.svg'}
                       alt='VAR'
                       width={215}
                       height={10}
