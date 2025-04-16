@@ -23,7 +23,6 @@ export default function FaleConosco() {
     aceitarComunicacoes: false,
   });
 
-  // Lida com as mudanças em <input>, <select>, <textarea>
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
