@@ -1,4 +1,4 @@
-import Contra from '@/app/components/Contra';
+// import Contra from '@/app/components/Contra';
 import Depoimentos from '@/app/components/Depoimentos';
 import Duvidas from '@/app/components/Duvidas';
 import Footer from '@/app/components/Footer';
@@ -15,7 +15,7 @@ export default function Home() {
     <main className='relative text-2xl text-red-900 bg-white'>
       <Header />
       <Hero />
-      <Contra />
+      {/* <Contra /> */}
       <Us />
       <Services />
       {/* <Packs /> */}

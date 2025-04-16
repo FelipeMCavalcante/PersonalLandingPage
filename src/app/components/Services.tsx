@@ -16,30 +16,30 @@ type ServiceInfo = {
 
 const servicesData: Record<ServiceKey, ServiceInfo> = {
   artistStaff: {
-    title: 'VIAGENS PARA ARTISTAS & STAFF',
+    title: 'Criação de Landing Pages',
     description:
-      'Gestão completa de transporte, hospedagem e logística para shows e turnês. Atendimento especializado para cantores, bandas e equipes. Planejamento de roteiros e otimização de deslocamentos.',
+      'Desenvolvo landing pages modernas, rápidas e responsivas para destacar seu produto, serviço ou marca. Foco em conversão, design estratégico e experiência do usuário.',
     buttonText: 'VER TODOS',
-    label: 'ARTISTAS & STAFF',
-    image: '/artist.png',
+    label: 'LANDING PAGE',
+    image: '/landing.svg',
     color: '#FE6150',
   },
   showsEventos: {
-    title: 'Viagens Corporativas & Executivas',
+    title: 'Relatórios BI para sua gestão',
     description:
-      'Gestão de viagens para empresários, produtores e equipes. Reserva de hotéis e passagens com condições especiais. Atendimento personalizado para demandas do mundo dos negócios.',
+      'Criação de relatórios visuais e interativos com dashboards personalizados para acompanhamento de métricas e tomada de decisão mais estratégica para seu negócio.',
     buttonText: 'VER TODOS',
-    label: 'SHOWS & EVENTOS',
-    image: '/show.png',
+    label: 'RELATÓRIO BI',
+    image: '/bi.svg',
     color: '#01C2CB',
   },
   corporativas: {
-    title: 'Pacotes para Corporativas & Executivas',
+    title: 'Design para todas as suas ideias',
     description:
-      'Organização completa de viagens de negócios. Salas de reunião, traslados, hospedagem e todo suporte para executivos em trânsito.',
+      'Criação de artes visuais personalizadas, identidades visuais, posts para redes sociais, apresentações e todo tipo de material gráfico para destacar sua marca.',
     buttonText: 'VER TODOS',
-    label: 'CORPORATIVAS & EXECUTIVAS',
-    image: '/viagem.png',
+    label: 'DESIGN',
+    image: '/design.svg',
     color: '#C9E165',
   },
 };
@@ -116,8 +116,8 @@ export default function Services() {
       </div>
       <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center max-[920px]:text-base font-robotoB'>
         <p>
-          CONHEÇA NOSSOS SERVIÇOS CLICANDO E DESCOBRINDO TUDO QUE FOI PENSADO
-          PARA VOCÊ.
+          CONHEÇA MEUS SERVIÇOS CLICANDO E DESCOBRINDO TUDO QUE FOI PENSADO PARA
+          VOCÊ.
         </p>
       </div>
 
@@ -132,8 +132,8 @@ export default function Services() {
             <Image
               src={servicesData.artistStaff.image}
               alt={servicesData.artistStaff.label}
-              width={200}
-              height={200}
+              width={250}
+              height={250}
             />
             <p className='font-robotoB text-black mt-2 text-center'>
               {servicesData.artistStaff.label}
@@ -163,8 +163,8 @@ export default function Services() {
             <Image
               src={servicesData.showsEventos.image}
               alt={servicesData.showsEventos.label}
-              width={200}
-              height={200}
+              width={250}
+              height={250}
             />
             <p className='font-robotoB text-black mt-2 text-center'>
               {servicesData.showsEventos.label}
@@ -193,8 +193,8 @@ export default function Services() {
             <Image
               src={servicesData.corporativas.image}
               alt={servicesData.corporativas.label}
-              width={200}
-              height={200}
+              width={250}
+              height={250}
             />
             <p className='font-robotoB text-black mt-2 text-center w-[200px]'>
               {servicesData.corporativas.label}
