@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Us() {
   return (
-    <div className='bg-white p-8 mt-10 pb-15' id='Us'>
+    <div className='bg-white p-8  pb-15' id='Us'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
         <div className='flex justify-center -mb-[40px]'>
           <Image

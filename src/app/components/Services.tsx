@@ -99,13 +99,13 @@ export default function Services() {
       id='services'
       className="
     bg-[#EBEBEB]
-    bg-[url('/setas.png')]
+    bg-[url('/feedwhite.png')]
     bg-no-repeat
-    bg-bottom
-    bg-[length:1300px]
-    max-[920px]:bg-[url('/mobileback.png')]
+    bg-center
+    bg-[length:1280px]
+    max-[920px]:bg-[url('/feedwhite.png')]
     max-[920px]:bg-no-repeat
-    max-[920px]:bg-[length:300px]
+    
   "
     >
       {/* Título e descrição */}
