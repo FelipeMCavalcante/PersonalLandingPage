@@ -24,9 +24,9 @@ import {
 import { TbBrandNextjs, TbBrandTerraform, TbBrandVercel } from 'react-icons/tb';
 
 export const NAVIGATION = [
-  { name: 'QUEM SOMOS', href: '/#Us', current: true },
+  { name: 'SOBRE MIM', href: '/#Us', current: true },
   { name: 'SERVIÇOS', href: '/#services', current: false },
-  { name: 'FALE CONOSCO', href: '/#Forms', current: false },
+  { name: 'CONTATO', href: '/#Forms', current: false },
   { name: 'DEPOIMENTOS', href: '/#Depoimentos', current: false },
   { name: 'FAQ', href: '/#Duvidas', current: false },
 ];

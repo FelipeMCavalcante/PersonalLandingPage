@@ -28,10 +28,10 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ questions }) => {
                 />
               </Disclosure.Button>
               <Disclosure.Panel className='px-2 pt-1 pb-1 text-sm text-gray-700 font-proximanova'>
-                <div className='border-t border-[#01C2CB] border-[1px] mb-2 lg:w-[101%]'></div>
+                <div className='border-t border-[#C800FF] border-[1px] mb-2 lg:w-[101%]'></div>
                 {question.content}
               </Disclosure.Panel>
-              <div className='border-t border-[#01C2CB] border-[1px] ml-3 mt-2'></div>
+              <div className='border-t border-[#C800FF] border-[1px] ml-3 mt-2'></div>
             </div>
           )}
         </Disclosure>
