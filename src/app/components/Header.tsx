@@ -79,7 +79,7 @@ export default function Header() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className={`rounded-full px-8 text-sm  xl:text-xl lg:text-lg font-8 text-[#00121C] hover:text-[#FE6150] hover:border-primary-700 transition-colors duration-500 ease-in-out uppercase ${
+                        className={`rounded-full px-8 text-sm  xl:text-xl lg:text-lg font-8 text-[#00121C] hover:text-[#C800FF] hover:border-primary-700 transition-colors duration-500 ease-in-out uppercase ${
                           currentPath === item.href ? '#00121C text-white' : ''
                         }`}
                         aria-current={

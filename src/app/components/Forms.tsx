@@ -2,7 +2,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 
 import Checkbox from '@mui/material/Checkbox';
-import { blue } from '@mui/material/colors';
+import { purple } from '@mui/material/colors';
 
 interface FormData {
   nome: string;
@@ -75,7 +75,7 @@ export default function FaleConosco() {
               value={formData.nome}
               onChange={handleChange}
               placeholder='NOME'
-              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-[#C800FF] placeholder-gray-500'
             />
             <input
               type='email'
@@ -83,7 +83,7 @@ export default function FaleConosco() {
               value={formData.email}
               onChange={handleChange}
               placeholder='E-MAIL'
-              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-[#C800FF] placeholder-gray-500'
             />
           </div>
 
@@ -95,13 +95,13 @@ export default function FaleConosco() {
               value={formData.whatsapp}
               onChange={handleChange}
               placeholder='WHATSAPP'
-              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-[#C800FF] placeholder-gray-500'
             />
             <select
               name='motivo'
               value={formData.motivo}
               onChange={handleChange}
-              className="w-full p-3  rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 text-gray-700 font-robotoR appearance-none bg-[url('/seta.png')] bg-no-repeat bg-[position:calc(100%-24px)_center]"
+              className="w-full p-3  rounded-lg border border-gray-300 focus:outline-none focus:border-[#C800FF] text-gray-700 font-robotoR appearance-none bg-[url('/seta.png')] bg-no-repeat bg-[position:calc(100%-24px)_center]"
             >
               <option value=''>SELECIONAR MOTIVO</option>
               <option value='Duvida'>Dúvida</option>
@@ -118,7 +118,7 @@ export default function FaleConosco() {
               onChange={handleChange}
               placeholder='DIGITE SUA MENSAGEM'
               rows={4}
-              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-teal-500 placeholder-gray-500 text-base'
+              className='w-full p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:border-[#C800FF] placeholder-gray-500 text-base'
             />
           </div>
 
@@ -131,9 +131,9 @@ export default function FaleConosco() {
                 checked={formData.aceitarComunicacoes}
                 onChange={handleChange}
                 sx={{
-                  color: blue[800],
+                  color: purple[800],
                   '&.Mui-checked': {
-                    color: blue[600],
+                    color: purple[600],
                   },
                 }}
               />
@@ -146,7 +146,7 @@ export default function FaleConosco() {
             </div>
             <button
               type='submit'
-              className='bg-[#01C2CB] hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-400'
+              className='bg-[#C800FF] hover:bg-[#76208e] text-white font-semibold py-3 px-6 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-400'
             >
               Entrar em contato
             </button>

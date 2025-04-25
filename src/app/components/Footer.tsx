@@ -12,29 +12,29 @@ export default function Footer() {
       >
         <div className='w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left font-robotoB lg:pl-12'>
           <Image
-            src={'/varbranco.svg'}
+            src={'/logobranca.svg'}
             width={180}
             height={50}
             alt='Logo Instituto.CC'
           />
-          <p className='text-sm mt-4'>VAR VIAGENS LTDA</p>
-          <p className='text-sm mt-2'>CNPJ:  46.534.552/0001/80 </p>
+          <p className='text-sm mt-4'>DESENVOLVEDOR FELIPE CAVALCANTE</p>
+          <p className='text-sm mt-2'>CNPJ:  55.315.701/0001-01 </p>
           <p className='text-sm mt-2'>
-            Av Washington Soares, 3663
+            Rua: Joãozito Arruda 2250
             <br />
             Fortaleza - CE
           </p>
-          <p className='text-sm mt-2'>atendimento@varviagens.com.br</p>
+          <p className='text-sm mt-2'>felipe.de.moraes.cavalcante@gmail.com</p>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center lg:items-start mt-12 lg:mt-10 text-center lg:text-left'>
-          <p className='text-[18px] text-[#C9E165] font-black font-robotoB'>
+          <p className='text-[18px] text-[#C800FF] font-black font-robotoB'>
             NOSSO SISTEMA
           </p>
           <Link
             href='/#Us'
             className='text-lg mt-4 hover:opacity-50 font-robotoR'
           >
-            QUEM SOMOS
+            SOBRE MIM
           </Link>
           <Link
             href='/#Services'
@@ -44,14 +44,14 @@ export default function Footer() {
           </Link>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center lg:items-start mt-12 lg:mt-10 text-center lg:text-left'>
-          <p className='text-[18px] text-[#C9E165] font-black font-robotoB'>
-            CONTATOS
+          <p className='text-[18px] text-[#C800FF] font-black font-robotoB'>
+            FALE COMIGO
           </p>
           <Link
             href='/#Forms'
             className='text-lg mt-4 hover:opacity-50 font-robotoR'
           >
-            FALE CONOSCO
+            CONTATO
           </Link>
           <Link
             href='/#Duvidas'
@@ -61,12 +61,12 @@ export default function Footer() {
           </Link>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center mt-6 lg:mt-14  relative text-center lg:text-left'>
-          <p className='text-base mt-10 text-[#C9E165] font-robotoB '>
+          <p className='text-base mt-10 text-[#C800FF] font-robotoB '>
             Nos siga nas redes sociais
           </p>
           <div className='flex items-center justify-center mt-4 gap-x-4'>
             <a
-              href='https://www.linkedin.com/company/oinstituto-cc/'
+              href='https://www.linkedin.com/in/felipe-cavalcante-934167161/'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -78,7 +78,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href='https://www.instagram.com/instituto.cc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+              href='https://www.instagram.com/_felipecavalcantee/'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -89,7 +89,7 @@ export default function Footer() {
                 alt='Instagram'
               />
             </a>
-            <a href='mailto:protocolo@instituto.cc'>
+            <a href='mailto:felipe.de.moraes.cavalcante@gmail.com'>
               <Image
                 src='/social-networks/email-icc.png'
                 width={30}
@@ -98,7 +98,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href='https://api.whatsapp.com/send?phone=556199498605&text=Ol%C3%A1!%20Acessei%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Instituto.%E2%84%83'
+              href='https://wa.me/85986075881'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -126,34 +126,6 @@ export default function Footer() {
           </Button>
         </div>
       </section>
-      <div className='border-t-2 border-gray-800'>
-        <div className='text-sm flex justify-center items-center text-[#7E7E7E] py-2 font-poppins'>
-          Desenvolvido por:
-          <span className='ml-2'>
-            <a
-              href='https://www.capimtech.com.br/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='relative inline-block'
-            >
-              <Image
-                src='/capim2.svg'
-                width={80}
-                height={50}
-                alt='Capim Logo'
-                className='transition-opacity duration-300 ease-in-out opacity-100 hover:opacity-0'
-              />
-              <Image
-                src='/capimhover2.svg'
-                width={80}
-                height={50}
-                alt='Capim Logo Hover'
-                className='absolute top-0 left-0 transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100'
-              />
-            </a>
-          </span>
-        </div>
-      </div>
     </>
   );
 }
