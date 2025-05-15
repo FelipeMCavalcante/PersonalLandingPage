@@ -17,13 +17,8 @@ export default function Footer() {
             height={50}
             alt='Logo Instituto.CC'
           />
-          <p className='text-sm mt-4'>DESENVOLVEDOR FELIPE CAVALCANTE</p>
+          <p className='text-sm mt-4'>FELIPE DE MORAES CAVALCANTE</p>
           <p className='text-sm mt-2'>CNPJ:  55.315.701/0001-01 </p>
-          <p className='text-sm mt-2'>
-            Rua: Joãozito Arruda 2250
-            <br />
-            Fortaleza - CE
-          </p>
           <p className='text-sm mt-2'>felipe.de.moraes.cavalcante@gmail.com</p>
         </div>
         <div className='w-full lg:w-1/4 flex flex-col items-center lg:items-start mt-12 lg:mt-10 text-center lg:text-left'>

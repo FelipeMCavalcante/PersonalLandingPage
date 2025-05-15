@@ -1,158 +1,163 @@
 'use client';
 
-import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
-import { useCallback } from 'react';
+import { useEffect, useState } from 'react';
 
-interface Slide {
-  src: string;
-  title: string;
-  description: string;
-}
+export default function QuemSomos() {
+  const [screenWidth, setScreenWidth] = useState(0);
 
-export default function Events() {
-  const slidesData: Slide[] = [
-    {
-      src: '/pack.png',
-      title: 'Nome do pacote 1',
-      description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam cursus. Lorem ipsum dolor sit amet consectetur.',
-    },
-    {
-      src: '/pack.png',
-      title: 'Nome do pacote 2',
-      description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam cursus. Lorem ipsum dolor sit amet consectetur.',
-    },
-    {
-      src: '/pack.png',
-      title: 'Nome do pacote 3',
-      description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id etiam cursus. Lorem ipsum dolor sit amet consectetur.',
-    },
-    {
-      src: '/pack.png',
-      title: 'Nome do pacote 4',
-      description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id também.',
-    },
-    {
-      src: '/pack.png',
-      title: 'Nome do pacote 5',
-      description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id também.',
-    },
-    {
-      src: '/pack.png',
-      title: 'Nome do pacote 6',
-      description:
-        'Purus senectus vitae tortor erat. Eu ut leo mattis eget id também.',
-    },
-  ];
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    handleResize(); // executa na montagem
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  return (
-    <div className='bg-[#ffff]' id='Packs'>
-      <div className='flex justify-center'>
-        <p className='text-[80px] font-bold mt-10 text-[#030303]  max-[920px]:text-[60px] font-robotoB'>
-          PACOTES
-        </p>
-      </div>
-
-      <div className='text-gray-800 justify-center flex font-medium text-lg p-5 text-center max-[920px]:text-base font-robotoR'>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-          autem hic pariatur doloribus veritatis.
-        </p>
-      </div>
-
-      <EmblaCarousel slides={slidesData} />
-    </div>
-  );
-}
-
-function EmblaCarousel({ slides }: { slides: Slide[] }) {
-  const OPTIONS = {
-    loop: true,
-    slidesToScroll: 1,
-    containScroll: 'trimSnaps' as const,
+  // Função para definir altura e padding da imagem topo
+  const getTopImageProps = () => {
+    if (screenWidth < 960) {
+      return {
+        src: '/topo.svg',
+        heightClass: 'h-40',
+        paddingTop: 'pt-40',
+      };
+    } else if (screenWidth > 1500) {
+      return {
+        src: '/topo.svg',
+        heightClass: 'h-52',
+        paddingTop: 'pt-52',
+      };
+    }
+    return {
+      src: '/topo.svg',
+      heightClass: 'h-40',
+      paddingTop: 'pt-40',
+    };
   };
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
-
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const {
+    src: topoSrc,
+    heightClass: topoHeightClass,
+    paddingTop,
+  } = getTopImageProps();
 
   return (
-    <section className='relative pb-6 max-w-[90%] mx-auto px-4'>
-      <button
-        onClick={scrollPrev}
-        className='absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
-        aria-label='Anterior'
+    <div
+      className={`relative bg-[#611974] w-full flex justify-center px-6 lg:px-10 py-16 overflow-hidden
+                  ${paddingTop}`}
+    >
+      {/* Imagem topo */}
+      <div
+        className={`absolute top-0 left-0 right-0 w-full ${topoHeightClass} z-0`}
+        aria-hidden='true'
       >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='40'
-          height='40'
-          fill='none'
-          stroke='currentColor'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          viewBox='0 0 24 24'
-        >
-          <polyline points='15 18 9 12 15 6'></polyline>
-        </svg>
-      </button>
-
-      <div className='overflow-hidden w-full' ref={emblaRef}>
-        <div className='flex'>
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className='flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.3333%] px-2'
-            >
-              <div className='bg-white border rounded-lg shadow-md overflow-hidden'>
-                <Image
-                  src={slide.src}
-                  alt={slide.title}
-                  width={700}
-                  height={500}
-                  className='object-cover'
-                />
-                <div className='p-4 text-center'>
-                  <h3 className='text-xl font-bold mb-2'>{slide.title}</h3>
-                  <p className='text-sm text-gray-600 mb-4'>
-                    {slide.description}
-                  </p>
-                  <button className='bg-white border-black border-2 text-black px-4 py-2 rounded-lg hover:bg-gray-400'>
-                    Saiba mais
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Image src={topoSrc} alt='' fill className='object-cover' priority />
       </div>
 
-      <button
-        onClick={scrollNext}
-        className='absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 text-black hover:text-gray-600'
-        aria-label='Próximo'
-      >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='40'
-          height='40'
-          fill='none'
-          stroke='currentColor'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          viewBox='0 0 24 24'
-        >
-          <polyline points='9 18 15 12 9 6'></polyline>
-        </svg>
-      </button>
-    </section>
+      {/* CONTEÚDO PRINCIPAL */}
+      <div className='w-full max-w-6xl flex flex-col lg:flex-row gap-10 text-white z-10'>
+        {/* COLUNA MISSÃO + VISÃO (centralizadas) */}
+        <div className='flex-1 flex flex-col items-center gap-12'>
+          {/* MISSÃO */}
+          <section className='flex flex-col items-center'>
+            <h3 className='text-2xl font-bold mb-4 flex items-center gap-2 justify-center'>
+              <span
+                className='text-[#000] text-3xl leading-none'
+                id='MissaoVisaoValores'
+              >
+                &lt;
+              </span>
+              Missão
+              <span className='text-[#000] text-3xl leading-none'>&gt;</span>
+            </h3>
+
+            <div className='flex items-start justify-center gap-4 max-w-xl'>
+              <Image
+                src='/aspas.svg'
+                alt='Aspas'
+                width={40}
+                height={40}
+                className='shrink-0'
+                priority
+              />
+              <p className='text-base leading-relaxed text-center'>
+                Promover o desenvolvimento humano por meio da cultura, do
+                esporte e da arte, contribuindo para uma sociedade mais justa,
+                inclusiva e consciente de sua diversidade.
+              </p>
+            </div>
+          </section>
+
+          <hr className='w-full border-[#FFFFFF33]' />
+
+          {/* VISÃO */}
+          <section className='flex flex-col items-center'>
+            <h3 className='text-2xl font-bold mb-4 flex items-center gap-2 justify-center'>
+              <span className='text-[#000] text-3xl leading-none'>&lt;</span>
+              Visão
+              <span className='text-[#000] text-3xl leading-none'>&gt;</span>
+            </h3>
+
+            <div className='flex items-start justify-center gap-4 max-w-xl'>
+              <Image
+                src='/aspas.svg'
+                alt='Aspas'
+                width={40}
+                height={40}
+                className='shrink-0'
+                priority
+              />
+              <p className='text-base leading-relaxed text-center'>
+                Ser referência nacional em ações que integrem esporte, cultura e
+                arte como instrumentos de transformação social, formando
+                cidadãos ativos, criativos e engajados com suas comunidades.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        {/* LINHA VERTICAL (desktop) */}
+        <div className='hidden lg:block border-l border-[#FFFFFF33]' />
+
+        {/* COLUNA VALORES */}
+        <div className='flex-1 lg:pl-10 flex flex-col items-center lg:items-start'>
+          {/* TÍTULO CENTRALIZADO */}
+          <h3 className='self-center text-2xl font-extrabold mb-10 flex items-center gap-2'>
+            <span className='text-[#000] text-3xl leading-none'>&lt;</span>
+            Valores
+            <span className='text-[#000] text-3xl leading-none'>&gt;</span>
+          </h3>
+
+          {/* GRID DE 2 COLUNAS */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12'>
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-right text-base whitespace-nowrap justify-self-end'>
+              Criatividade e Inovação
+            </span>
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-left text-base whitespace-nowrap justify-self-start'>
+              Ética e Transparência
+            </span>
+
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-right text-base whitespace-nowrap justify-self-end'>
+              Respeito à Diversidade
+            </span>
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-left text-base whitespace-nowrap justify-self-start'>
+              Compromisso Social
+            </span>
+
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-right text-base whitespace-nowrap justify-self-end'>
+              Inclusão e Acesso
+            </span>
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-left text-base whitespace-nowrap justify-self-start'>
+              Trabalho em Rede
+            </span>
+
+            {/* último valor centralizado em ambas as colunas */}
+            <span className='w-auto border border-[#C800FF] rounded-xl px-6 py-3 text-center text-base whitespace-nowrap col-span-1 sm:col-span-2 justify-self-center'>
+              Valorização da Cultura Local
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

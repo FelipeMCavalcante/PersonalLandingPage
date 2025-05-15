@@ -36,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${robotoR.variable} ${robotoB.variable}`}
       >
-        <div className='min-h-full mx-auto max-w-7xl !bg-red-700 shadow-2xl'>
+        <div className='min-h-full mx-auto !bg-red-700 shadow-2xl'>
           {children}
         </div>
       </body>
