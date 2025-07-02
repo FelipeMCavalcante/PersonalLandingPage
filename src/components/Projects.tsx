@@ -55,7 +55,7 @@ export default function Highlights() {
       description: '',
     },
     {
-      src: '/imgProjects/j1.png',
+      src: '/imgProjects/j2.png',
       title: 'AVIVACAMP',
       description: 'Descrição do evento Avivamento',
     },
