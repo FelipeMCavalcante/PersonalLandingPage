@@ -24,11 +24,19 @@ import {
 import { TbBrandNextjs, TbBrandTerraform, TbBrandVercel } from 'react-icons/tb';
 
 export const NAVIGATION = [
+<<<<<<< HEAD:src/app/lib/constants.tsx
   { name: 'SOBRE MIM', href: '/#Us', current: true },
   { name: 'SERVIÇOS', href: '/#services', current: false },
   { name: 'CONTATO', href: '/#Forms', current: false },
   { name: 'DEPOIMENTOS', href: '/#Depoimentos', current: false },
   { name: 'FAQ', href: '/#Duvidas', current: false },
+=======
+  { name: 'MOVIMENTO', href: '/#Us', current: true },
+  { name: 'SANTOS', href: '/#Santos', current: false },
+  { name: 'SÉRIES', href: '/#Serie', current: false },
+  { name: 'PROJETOS', href: '/#Projects', current: false },
+  { name: 'CONTATO', href: '/#Contact', current: false },
+>>>>>>> b84a9f9 (novas mudanças):src/lib/constants.tsx
 ];
 
 export interface ClientImageProps {
