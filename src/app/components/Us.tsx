@@ -40,7 +40,7 @@ export default function Us() {
     <div
       id='Us'
       className={`relative flex flex-col lg:flex-row items-center
-                  px-6 lg:px-16 bg-white ${paddingBottom}`}
+                  px-6 lg:px-16 bg-[#000] ${paddingBottom}`}
     >
       {/* Imagem principal */}
       <div className='flex-1 flex justify-center lg:justify-start z-10 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none -mb-10'>
@@ -55,7 +55,7 @@ export default function Us() {
       </div>
 
       {/* Texto */}
-      <div className='flex-1 text-base leading-relaxed text-gray-800 font-medium text-center md:text-left z-10'>
+      <div className='flex-1 text-base leading-relaxed text-gray-100 font-medium text-center md:text-left z-10'>
         <p className='text-[16px] font-outfitregular text-justify lg:pr-[70px]'>
           Me chamo <strong>Felipe Cavalcante</strong>, sou desenvolvedor
           frontend e moro em <strong>Fortaleza, Ceará</strong>. Trabalho com

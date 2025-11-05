@@ -4,14 +4,14 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className='mt-24 w-full h-auto'>
+    <div className='mt-24 w-full h-auto flex justify-center'>
       <Image
-        src='/fcwallpaper.svg'
-        alt='VAR VIAGENS'
-        width={1320}
-        height={498}
-        style={{ width: '100%', height: 'auto' }}
-        className='object-cover'
+        src='/new-hero.svg'
+        alt='Hero Felipe Cavalcante'
+        width={1400}
+        height={350}
+        className='w-full h-auto object-cover'
+        priority
       />
     </div>
   );
